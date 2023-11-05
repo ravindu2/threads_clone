@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "897401208911",
+    "project_id": "authoapp-b6157",
+    "storage_bucket": "authoapp-b6157.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897401208911:android:2227fdd6f9af8d4e0c2a3a",
+        "android_client_info": {
+          "package_name": "com.example.autho_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAArMUUVDFYMrZ57u8FqDYwWUQS2nUhIhc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
