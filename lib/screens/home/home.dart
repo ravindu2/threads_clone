@@ -1,3 +1,5 @@
+import 'package:autho_app/constns/colors.dart';
+import 'package:autho_app/constns/description.dart';
 import 'package:autho_app/services/auth.dart';
 import 'package:flutter/material.dart';
 
@@ -14,17 +16,61 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(
-        title: Text("Home"),
-        actions: [
-          ElevatedButton(
-            onPressed: () async {
-              await _auth.signOut();
-            },
-            child: const Icon(Icons.logout),
-          )
-        ],
-      )),
+        backgroundColor: bgBlack,
+        appBar: AppBar(
+          elevation: 0,
+          backgroundColor: bgBlack,
+          actions: [
+            ElevatedButton(
+              style: const ButtonStyle(
+                backgroundColor: MaterialStatePropertyAll(bgBlack),
+              ),
+              onPressed: () async {
+                await _auth.signOut();
+              },
+              child: const Icon(Icons.logout),
+            )
+          ],
+        ),
+        body: Padding(
+          padding: EdgeInsets.all(20.0),
+          child: Center(
+            child: Column(
+              children: [
+                const Text(
+                  "Home",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                const Text(
+                  description,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: textLight,
+                    fontSize: 10,
+                    fontWeight: FontWeight.w300,
+                  ),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
+                Center(
+                  child: Image.asset(
+                    'assets/images/man.png',
+                    height: 200,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
